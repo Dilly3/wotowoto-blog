@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogpost</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center; font-size: 50px; color: rgb(160, 138, 15);">Woto-Woto Blog</h2>
+        <h3 style="opacity: 0.6; text-align: center; font-size: 35px; color: rgba(202, 183, 72, 0.575);">{{.Title}}</h3>
+            <h4 style="opacity: 0.6; text-align: center; font-size: 18px; color: rgba(202, 183, 72, 0.575);">{{.Date}}</h4>
+    </div> 
+
+    <div style="display: flex; flex-direction: column; width: 600px; height: 300px; justify-content: center; align-items: center; margin: auto; text-align: center;  font-family: Georgia, 'Times New Roman', Times, serif; text-align: left; padding: 18px;">
+    
+        <p style="color:black; font-size: 20px;">{{.Body}}</p>
+    </div>
+    
+    <a style="display: block;" href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>BlogPost</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .container{
+            padding: auto;
+           
+        }
+        .posttori{
+            display: none;
+        }
+        .btndiv{
+            margin-top: 25px;
+            display:flex ;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+        }
+        .addblogbtn{
+            background-color: rgba(160, 138, 15, 0.616);
+            border: none;
+            color: rgba(88, 15, 15, 0.466);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-left: 30px;
+
+        }
+        .addblogbtn a{
+            color: rgba(88, 15, 15, 0.822);
+            text-decoration: none;
+            
+
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+        
+        <div style="margin: auto; display: flex; flex-direction: column; align-items: center;justify-content: center; height: 900px;"> 
+            <div>
+                <h2 style="text-align: center; font-size: 50px; color: rgb(160, 138, 15);"> Woto-Woto Blog</h2>
+                <h3 style="opacity: 0.6; text-align: center; font-size: 28px; color: rgba(138, 120, 23, 0.425);">wetin happen 4 area?? </h3>
+            <h3 style="opacity: 0.6 ; text-align: center; font-size: 30px; color:rgba(202, 183, 72, 0.575);">talk ur own tori</h3>
+            </div>
+           <div style="align-items: center;">
+            <form  style="margin-left: auto;"  action="/blogs" method="post">
+                <label></label><br>
+                <input class="input" placeholder="Tori Head" name="title" style="padding: 10px; width: 850px; margin: auto; height: 80px; font-size: 20px;"></input><br><br>
+                <label></label><br>
+                <textarea class="inputtext" placeholder="Tori Body" name="body" style="padding: 10px; width: 850px; height: 150px; font-size: 20px;"></textarea><br>
+                
+                
+               
+                <div class="btndiv">
+                    <button class="addblogbtn posttori" type="submit"> post tori</button> 
+                    <a  class="addblogbtn" href="/">view tori</a>
+                    
+                </div> 
+            </form> 
+           
+           </div>
+           
+            
+                
+            
+       </div>
+    </div>
+   
+
+    
+
+   
+</body>
+</html>

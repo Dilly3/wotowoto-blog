@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        #blogs {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            color: rgba(88, 15, 15, 0.822);
+            font-size: 18px ;
+        }
+
+        #blogs td, #blogs th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #blogs tr:nth-child(even){background-color: #f2f2f2;}
+
+        #blogs tr:hover {background-color: rgba(223, 194, 35, 0.212);}
+
+        #blogs th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.274);
+            color: white;
+            width: 10%;
+        }
+        .bodi{
+            width: 48%;
+            font-size: 18px;
+            text-align: justify;
+        }
+        .head{
+            text-align: left;
+        }
+        /* #blogs tr td{
+            background-color: rgb(160, 155, 155);
+        } */
+        .links li{
+            text-decoration: none;
+            list-style: none;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        .links li a{
+            text-decoration: none;
+        }
+        button a{
+            list-style: none;
+            padding: 10px;
+            text-decoration: none;
+            color: #7f8688d2;
+            width: 30px;
+            font-size: 16px;
+        }
+        .delete > button{
+            width: 75px;
+        }
+        
+        .delete{
+            font-size: 12px;
+        }
+        .delete:hover{
+            scale: 1.1;
+            color: rgb(134, 7, 24);
+            font-size: 16px;
+            
+        }
+        .tymTh{
+            font-size: 18px;
+        }
+        .tym{
+            font-size: 12px;
+        }
+        .btndiv{
+            display:flex ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .addblogbtn{
+            background-color: rgba(131, 114, 20, 0.575);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+
+        }
+        .addblogbtn a{
+            color: white;
+            text-decoration: none;
+
+        }
+    </style>
+
+
+`
+
+</head>
+<body>
+<h2 style="text-align: center; font-size: 50px; color: rgb(160, 138, 15);" >Woto-Woto Blog</h2>
+<br>
+<h3 style="text-align: center; font-size: 35px; color: rgba(179, 156, 25, 0.199)">all the tori as we hear am 4 streeti</h3>
+<div class="btndiv">
+    <button class="addblogbtn" style="margin-bottom: 10px;"> <a href="/view">talk ur own tori</a></button> 
+</div>
+
+
+<table id="blogs" class="display" style = "margin-top:15px;"  >
+
+    <thead>
+    <!-- <th>ISBN</th> -->
+    <th class="deleteh" style="color: rgba(85, 4, 4, 0.616);"> cap / lower</th>
+    <th style="color: rgba(88, 15, 15, 0.822)" class="head"> tori head </th>
+    <th style="color: rgba(85, 4, 4, 0.692)" class="bodi">tori body</th>
+    <th style="color: rgba(85, 4, 4, 0.664)" class="tymTh">time</th>
+    <th class="deleteh" style="color: rgba(85, 4, 4, 0.616);">edit / delete</th>
+
+
+
+    </thead>
+    <tbody>
+{{range . }}
+    <tr>
+        <!-- <td>{{.SerialN}}</td> -->
+        <td class="delete">
+            <button><a class="delete" href="/cap/{{ .SerialN }}">cap</a></button>
+            <button><a class="delete" href="/readmore/{{ .SerialN}}">view</a></button>
+        </td>
+        <td class="head">{{.Title}}</td>
+        <td class="bodi">{{.Body}}</td>
+        <td class="tym">{{.Date}}</td>
+        <td class="delete">
+            <button><a class="delete" href="/delete/{{ .SerialN }}">delete</a></button>
+            <button><a class="delete" href="/edit/{{.SerialN}}">  edit</a></button>
+        </td>
+    </tr>
+{{end}}
+    </tbody>
+</table>
+
+
+     
+    
+
+
+
+
+
+
+</body>
+</html>
