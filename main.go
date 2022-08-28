@@ -1,7 +1,6 @@
 package main
 
 import (
-	H "blogsite/Template/Funcs"
 	"database/sql"
 	"fmt"
 	"html/template"
